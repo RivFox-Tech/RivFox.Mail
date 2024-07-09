@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="RivFox.Mail.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RivFox.Mail"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <NavigationView SelectionChanged="NavigationView_SelectionChanged" IsPaneOpen="False" OpenPaneLength="280" IsBackButtonVisible="Collapsed">
+            <NavigationView.PaneHeader>
+                <TextBlock Margin="0,0,16,2" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Text="Copyright © 2024 RivFox. All" />
+            </NavigationView.PaneHeader>
+            <NavigationView.MenuItems>
+                <NavigationViewItem Tag="HomeView" IsSelected="True" Icon="Home" x:Uid="Main_NavigationView_Item_Home" />
+            </NavigationView.MenuItems>
+            <Frame x:Name="MainFrame" />
+        </NavigationView>
+    </Grid>
+    <Page.Background>
+        <AcrylicBrush BackgroundSource="HostBackdrop"  TintOpacity="0.5" TintColor="{ThemeResource SystemChromeAltHighColor}" />
+    </Page.Background>
+</Page>
